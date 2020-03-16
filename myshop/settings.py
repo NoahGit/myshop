@@ -128,3 +128,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
+
+LOGIN_REDIRECT_URL = 'shop:product_list'
+LOGOUT_REDIRECT_URL = 'shop:product_list'
+LOGIN_URL = 'shop:login'
+LOGOUT_URL = 'shop:logout'
+
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST_USER = 'xiangjiaotuobei@163.com'  # 填写你的邮件地址
+EMAIL_HOST_PASSWORD = 'GaoYong1983'  # 邮箱的smtp授权码
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+

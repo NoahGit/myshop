@@ -1,0 +1,10 @@
+{% extends "shop/base.html" %}
+
+{% block title %}注销{% endblock %}
+
+{% block content %}
+    <h1>注销</h1>
+    <p>
+        您已成功注销。 您可以 <a href="{% url "shop:login" %}">再次登陆</a>。
+    </p>
+{% endblock %}

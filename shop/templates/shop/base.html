@@ -14,6 +14,14 @@
         <div class="cart">
             Your cart is empty.
         </div>
+        <div>
+            {% if request.user.is_authenticated %}
+                Hello {{ request.user.first_name }},<a href="{% url "shop:password_change" %}">修改密码</a>
+                <a href="{% url "shop:logout" %}">Logout</a>
+            {% else %}
+                <a href="{% url "shop:login" %}">Log-in</a>
+            {% endif %}
+        </div>
     </div>
     <div id="content">
         {% block content%}
