@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
 from .forms import UserRegistrationForm
 
 
