@@ -3,6 +3,7 @@
 {% block title %}登陆{% endblock %}
 
 {% block content %}
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
     <h1>登陆</h1>
     {% if form.errors %}
         <p>
@@ -14,6 +15,7 @@
             If you don't have an account <a href="{% url "shop:register" %}">register here</a>.
         </p>
     {% endif %}
+    <p><a href="{% url "shop:password_reset" %}">Forgotten your password?</a> </p>
     <div class="login-form">
         <form action="{% url 'shop:login' %}" method="post">
             {{ form.as_p }}
@@ -22,7 +24,7 @@
             <p>
                 <input type="submit" value="登陆">
             </p>
-            <p><a href="{% url "shop:password_reset" %}">Forgotten your password?</a> </p>
         </form>
+    </div>
     </div>
 {% endblock %}
