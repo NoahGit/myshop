@@ -42,7 +42,19 @@
 {% if request.user.is_authenticated %}
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-        <a class="nav-link" href="#">Your cart is empty.</a>
+        <p class="nav-link">
+            {% with total_items=cart|length %}
+                {% if cart|length > 0 %}
+                    您的购物车:
+                    <a href="{% url "cart:cart_detail" %}">
+                    {{ total_items }} 件商品，合计
+                    ￥{{ cart.get_total_price}}
+                    </a>
+                {% else %}
+                    您的购物车是空的。
+                {% endif %}
+            {% endwith %}
+        </p>
         </li>
         <li class="nav-item">
         <p class="nav-link" >Hello</p>
