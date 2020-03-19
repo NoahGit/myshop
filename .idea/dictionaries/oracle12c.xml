@@ -2,6 +2,7 @@
   <dictionary name="oracle12c">
     <words>
       <w>amqp</w>
+      <w>braintree</w>
       <w>jsdelivr</w>
       <w>myshop</w>
       <w>navbar</w>
