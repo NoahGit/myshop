@@ -1,9 +1,3 @@
-# _*_coding:utf-8_*_
-# Author : oracle12c
-# Time   : 2020/3/16 19:58
-# File   : forms.py
-# IDE    : PyCharm
-
 from django import forms
 from django.contrib.auth.models import User
 
