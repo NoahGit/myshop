@@ -11,11 +11,11 @@
         </p>
     {% else %}
         <p>
-            Please, use the following form to log-in.
-            If you don't have an account <a href="{% url "shop:register" %}">register here</a>.
+            请使用以下表格登录。
+            如果你没有账户 <a href="{% url "shop:register" %}">这里注册</a>。
         </p>
     {% endif %}
-    <p><a href="{% url "shop:password_reset" %}">Forgotten your password?</a> </p>
+    <p><a href="{% url "shop:password_reset" %}">忘记了您的密码？</a> </p>
     <div class="login-form">
         <form action="{% url 'shop:login' %}" method="post">
             {{ form.as_p }}
