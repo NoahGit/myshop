@@ -1,9 +1,3 @@
-# _*_coding:utf-8_*_
-# Author : oracle12c
-# Time   : 2020/3/16 10:36
-# File   : cart.py
-# IDE    : PyCharm
-
 from decimal import Decimal
 from django.conf import settings
 from shop.models import Product

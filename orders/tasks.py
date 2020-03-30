@@ -1,9 +1,3 @@
-# _*_coding:utf-8_*_
-# Author : oracle12c
-# Time   : 2020/3/19 15:45
-# File   : tasks.py
-# IDE    : PyCharm
-
 from celery import Celery, task
 from django.core.mail import send_mail
 from .models import Order

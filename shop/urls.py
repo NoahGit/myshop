@@ -1,9 +1,3 @@
-# _*_coding:utf-8_*_
-# Author : oracle12c
-# Time   : 2020/3/15 22:43
-# File   : urls.py
-# IDE    : PyCharm
-
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from . import views

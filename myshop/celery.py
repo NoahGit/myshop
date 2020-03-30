@@ -1,9 +1,3 @@
-# _*_coding:utf-8_*_
-# Author : oracle12c
-# Time   : 2020/3/19 1:02
-# File   : celery.py
-# IDE    : PyCharm
-
 import os
 from celery import Celery
 

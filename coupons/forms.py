@@ -1,11 +1,6 @@
-# _*_coding:utf-8_*_
-# Author : oracle12c
-# Time   : 2020/3/28 13:32
-# File   : forms.py
-# IDE    : PyCharm
-
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 
 class CouponApplyForm(forms.Form):
-    code = forms.CharField()
+    code = forms.CharField(label=_('Coupon'))

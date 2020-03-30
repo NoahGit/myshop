@@ -1,9 +1,9 @@
 {% extends "shop/base.html" %}
 
-{% block title %}Checkout{% endblock %}
+{% block title %}付款{% endblock %}
 
 {% block content %}
-    <h1>结帐</h1>
+    <h1>付款</h1>
 
     <div class="order-info">
     <h3>您的订单</h3>
@@ -16,12 +16,12 @@
         {% endfor %}
         {% if cart.coupon %}
             <li>
-            "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% off)
+            "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% 折扣)
             <span>- ￥{{ cart.get_discount|floatformat:"2" }}</span>
             </li>
         {% endif %}
     </ul>
-    <p>Total: ￥{{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
+    <p>合计: ￥{{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
     </div>
 
     <form action="." method="post" class="order-form">

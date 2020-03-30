@@ -1,8 +1,8 @@
 {% extends "shop/base.html" %}
 
-{% block title %}Welcome{% endblock %}
+{% block title %}欢迎{% endblock %}
 
 {% block content %}
-    <h1>Welcome {{ new_user.first_name }} !</h1>
-    <p>Your account has been successfully created. Now you can <a href="{% url "shop:login" %}">log in</a>.</p>
+    <h1>欢迎 {{ new_user.first_name }} !</h1>
+    <p>您的帐户已成功创建。现在你可以 <a href="{% url "shop:login" %}">登陆</a>。</p>
 {% endblock %}
