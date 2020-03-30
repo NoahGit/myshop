@@ -7,13 +7,13 @@
 <body>
 <h1>My Shop</h1>
 <p>
-    发票号码Invoice no. {{ order.id }}<br>
+    Invoice no. {{ order.id }}<br>
     <span class="secondary">
         {{ order.created|date:"M d, Y" }}
     </span>
 </p>
 
-<h3>Bill to收票人</h3>
+<h3>Bill to</h3>
 <p>
     {{ order.first_name }} {{ order.last_name }}<br>
     {{ order.email }}<br>
@@ -21,7 +21,7 @@
     {{ order.postal_code }}, {{ order.city }}
 </p>
 
-<h3>Items bought购买物品</h3>
+<h3>Items bought</h3>
 <table>
     <thead>
     <tr>
