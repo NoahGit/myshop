@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 from braintree import Configuration, Environment
-from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'rosetta',
+    'localflavor',
 ]
 
 MIDDLEWARE = [
@@ -163,11 +163,6 @@ Configuration.configure(
     BRAINTREE_PRIVATE_KEY
 )
 
-LANGUAGES = (
-    ('zh-hans', _('Simplified Chinese')),
-    ('en', _('English')),
-)
-
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale/'),
-)
+REDIS_HOST = '222.25.2.37'
+REDIS_PORT = 6379
+REDIS_DB = 1
